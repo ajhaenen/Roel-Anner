@@ -2,6 +2,8 @@
 
 Het grote Anner en Roel hoeven nooit meer te werken project.
 
+TrueFX Timeseries is een jupiter notebook met de eerste probeersels
+
 ## Data links
 [TrueFX](https://www.truefx.com/?page=frontpage)
 
