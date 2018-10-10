@@ -1,5 +1,5 @@
 clear all;clc;tic
-load('TrueFX_201601.mat')
+load('Y:\Roel-Anner_DATA\TrueFX_201601.mat')
 fields = fieldnames(Exchange);
 
 % %% Time comparison

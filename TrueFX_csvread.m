@@ -1,6 +1,6 @@
 clear all;clc;tic
 %% Read csv data from TrueFX
-directory = 'C:\Users\ahaenen\Documents\GitHub\Roel-Anner_DATA\';
+directory = 'Y:\Roel-Anner_DATA\';
 subdirectory = 'TrueFX_201601';
 formatIn = 'yyyymmdd HH:MM:SS.FFF';
 listing = dir(strcat(subdirectory,'\*.csv'));
@@ -13,4 +13,4 @@ for i = 1:length(listing)
     Exchange.(Name{i}).time = datenum(out{2},formatIn); Exchange.(Name{i}).sell = out{3}; Exchange.(Name{i}).buy = out{4};
 end
 
-save(subdirectory, 'Exchange')
+save(strcat(directory,subdirectory), 'Exchange')
