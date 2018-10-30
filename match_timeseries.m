@@ -19,5 +19,17 @@ for i=1:15
     Exchange2.(fields{i}).sell(1) = Exchange2.(fields{i}).sell(2);
 end
 
+%%
+Exchange5Hz = zeros(2*15,length(TIME));
+for i = 1:15
+    % buy
+    Exchange5Hz(i,:) = Exchange2.(fields{i}).buy;
+    Exchange5Hz_Fields{i} = strcat((fields{i}), '_buy');
+    % sell
+    Exchange5Hz(i+15,:) = Exchange2.(fields{i}).sell;
+    Exchange5Hz_Fields{i+15} = strcat((fields{i}), '_sell');
+    
+end
 
-
+%%
+save('Y:\Roel-Anner_DATA\TrueFX_201601_5Hz_pythonready.mat', 'Exchange5Hz', 'Exchange5Hz_Fields', 'TIME')
